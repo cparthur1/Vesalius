@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+.page{
+  background-color: #f8efed;
+  color: #3B0908;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;;
+}
+
+.MainButton {
+  width: 100px;
+  height: 100px;
+  background-color: #C0001B;
+  color: #FFEDEB;
+  transition: all 0.1s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.MainButton:hover {
+  background-color: #a00016;
+  border-radius: 30px;
+  transform: scale(1.5);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);}
+
+.mainIcon {
+  filter: brightness(0) saturate(100%) invert(90%) sepia(1%) saturate(1993%) hue-rotate(317deg) brightness(101%) contrast(106%);
+  height: 60%;
+}
+
+.SecondaryButton {
+  background-color: #B7847F;
+  color: #1B0E0D;
+  transition: all 0.1s ease-in-out;
+  height: 60px;
+  width: 80%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.selected{
+  background-color: #502e2d;
+  color: #f8efed;
+}
+
+.SecondaryIcon {
+  filter: brightness(0) saturate(100%) invert(3%) sepia(42%) saturate(1980%) hue-rotate(331deg) brightness(110%) contrast(93%);
+  height: 60%;
+}
+
+.VerticalNav {
+  margin: 24px;
+  margin-right: 6%;
+  height: 400px;
+  width: 100px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #F2CDCb;
+  border: 10px solid #e2c1bf;
+  padding: 10px;
+  padding-bottom: 30px;
+  position: fixed;
+  z-index: 3;
+  gap: 24px;
+}
+
+.HorizontalNav {
+  margin: 24px;
+  margin-right: 6%;
+  height: 100px;
+  width: 600px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  background-color: #F2CDCb;
+  border: 10px solid #e2c1bf;
+  padding: 12px;
+  padding-left: 32px;
+  padding-right: 32px;
+  position: fixed;
+  gap: 24px;
+  bottom: 24px;
+  left: 50%;
+  z-index: 3;
+}
+
+.content{
+  justify-content: center;
+  width: 90%;
+  height: 100%;
+  position: relative;
+  left: 140px;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  padding: 24px;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.call2action{
+  background-color: #C0001B;
+  color: #f8efed;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 18px;
+  width: 120px;
+  transition: all 0.4s ease-in-out;
+  position: absolute;
+  bottom: 24px;
+  border-radius: 999px;
+}
+
+.call2action:hover {
+  background-color: #a00016;
+  border-radius: 30px;
+  transform: scale(1.05);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.img{
+  padding: 0; 
+  border-radius: 24px;
+  width: 42%;
+  margin: 0;
+  object-fit: cover;
+}
+
+/*Cartão título*/
+.titleCard{
+  width: 38%;
+  border-radius: 24px;
+  padding: 24px;
+  padding-left: 36px;
+  background-color: #F2CDCb;
+  font-size: 16px;
+  color: #2e1715;
+  position: relative;
+}
+.h1{
+  font-weight: 600;
+  font-size: 80px;
+  margin: 0;
+  width: 70%;
+}
+
+/*Cartão informação */
+.infoCard{
+  background-color: #F1DEDD;
+  width: 300px;
+  border-radius: 24px;
+  padding: 24px;
+  position: relative;
+}

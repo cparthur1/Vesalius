@@ -1,0 +1,217 @@
+/*Material v3 Expressive Shapes*/
+.squircle {
+  border-radius: 50% 50% 50% 50% / 80% 80% 20% 20%;
+}
+.squircle:hover {
+  border-radius: 50% 50% 50% 50% / 20% 20% 80% 80%;
+}
+
+.blob {
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+}
+.blob:hover {
+  border-radius: 60% 40% 30% 70% / 50% 60% 50% 40%;
+}
+
+.circle {
+  border-radius: 50%;
+}
+.circle:hover {
+  border-radius: 40% 60% 50% 50% / 50% 40% 50% 60%;
+}
+
+.arch {
+  border-radius: 50% 50% 0 0;
+}
+.arch:hover {
+  border-radius: 60% 60% 10% 10%;
+}
+
+.pill {
+  border-radius: 999px;
+}
+
+.pill:hover {
+border-radius: 30px;
+  transform: scale(1.2);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  animation: animateCircle 5s ease-in-out infinite;
+}
+@keyframes animateCircle {
+  0%, 100% {
+    border-radius: 999px;
+  }
+  5%{border-radius: 50%;}
+  25% {
+    border-radius: 40% 60% 50% 50% / 50% 40% 50% 60%;
+  }
+  50% {
+    border-radius: 60% 40%;
+  }
+  75% {
+     border-radius: 50% 50% 40% 60% / 60% 50% 40% 50%;
+  }
+}
+
+.arrow {
+  border-radius: 45% 45% 20% 20% / 80% 80% 35% 35%;
+}
+.arrow:hover {
+  border-radius: 20% 20% 45% 45% / 35% 35% 80% 80%;
+}
+
+.gem {
+  border-radius: 30% 70% 30% 70% / 50% 50% 50% 50%;
+}
+.gem:hover {
+  border-radius: 70% 30% 70% 30% / 50% 50% 50% 50%;
+}
+
+.foursided {
+  border-radius: 40% 60% 40% 60% / 60% 40% 60% 40%;
+}
+.foursided:hover {
+  border-radius: 60% 40% 60% 40% / 40% 60% 40% 60%;
+}
+
+.ghost {
+  border-radius: 50% 50% 35% 35% / 60% 60% 40% 40%;
+}
+.ghost:hover {
+  border-radius: 50% 50% 45% 25% / 60% 60% 55% 45%;
+}
+
+.bun {
+  border-radius: 50% 50% 10% 10% / 80% 80% 20% 20%;
+}
+.bun:hover {
+  border-radius: 60% 60% 15% 15% / 70% 70% 30% 30%;
+}
+
+
+/*
+  Material v3 Expressive Animated Shapes
+  Add the ".alive" class to any shape to trigger its unique animation.
+  Example: <div class="blob alive"></div>
+*/
+
+/* --- Squircle Animation --- */
+.squircle.alive {
+  animation: animateSquircle 4s ease-in-out infinite;
+}
+@keyframes animateSquircle {
+  0%, 100% {
+    border-radius: 50% 50% 50% 50% / 80% 80% 20% 20%;
+  }
+  50% {
+    border-radius: 50% 50% 50% 50% / 20% 20% 80% 80%;
+  }
+}
+
+/* --- Blob Animation --- */
+.blob.alive {
+  animation: animateBlob 7s ease-in-out infinite;
+}
+@keyframes animateBlob {
+  0%, 100% {
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  }
+  33% {
+    border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
+  }
+  66% {
+    border-radius: 60% 40% 30% 70% / 50% 60% 50% 40%;
+  }
+}
+
+/* --- Arch Animation (Bounce) --- */
+.arch.alive {
+  animation: animateArch 3s ease-in-out infinite;
+}
+@keyframes animateArch {
+  0%, 100% {
+    border-radius: 50% 50% 0 0;
+  }
+  50% {
+    border-radius: 50% 50% 15% 15%;
+  }
+}
+
+/* --- Pill Animation (Pulse) --- */
+.pill.alive {
+  animation: animatePill 2s ease-in-out infinite;
+}
+@keyframes animatePill {
+  0%, 100% {
+    border-radius: 999px;
+  }
+  50% {
+    border-radius: 40px;
+  }
+}
+
+
+/* --- Arrow Animation (Flip) --- */
+.arrow.alive {
+  animation: animateArrow 4s ease-in-out infinite;
+}
+@keyframes animateArrow {
+  0%, 100% {
+    border-radius: 45% 45% 20% 20% / 80% 80% 35% 35%;
+  }
+  50% {
+    border-radius: 20% 20% 45% 45% / 35% 35% 80% 80%;
+  }
+}
+
+/* --- Gem Animation (Shimmer) --- */
+.gem.alive {
+  animation: animateGem 3s ease-in-out infinite;
+}
+@keyframes animateGem {
+  0%, 100% {
+    border-radius: 30% 70% 30% 70% / 50% 50% 50% 50%;
+  }
+  50% {
+    border-radius: 70% 30% 70% 30% / 50% 50% 50% 50%;
+  }
+}
+
+/* --- Foursided Animation (Morph) --- */
+.foursided.alive {
+  animation: animateFoursided 6s ease-in-out infinite;
+}
+@keyframes animateFoursided {
+  0%, 100% {
+    border-radius: 40% 60% 40% 60% / 60% 40% 60% 40%;
+  }
+  50% {
+    border-radius: 60% 40% 60% 40% / 40% 60% 40% 60%;
+  }
+}
+
+/* --- Ghost Animation (Wobble) --- */
+.ghost.alive {
+  animation: animateGhost 3s ease-in-out infinite;
+}
+@keyframes animateGhost {
+  0%, 100% {
+    border-radius: 50% 50% 35% 35% / 60% 60% 40% 40%;
+  }
+  50% {
+    border-radius: 40% 40% 25% 45% / 50% 50% 55% 45%;
+  }
+}
+
+/* --- Bun Animation (Rise) --- */
+.bun.alive {
+  animation: animateBun 4s ease-in-out infinite;
+}
+@keyframes animateBun {
+  0%, 100% {
+    border-radius: 50% 50% 10% 10% / 80% 80% 20% 20%;
+  }
+  50% {
+    border-radius: 50% 50% 25% 25% / 90% 90% 10% 10%;
+  }
+}
