@@ -150,6 +150,27 @@
   object-fit: cover;
 }
 
+/* Video cover */
+.video-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px; /* Optional: to match your card style */
+  padding: 0; 
+  border-radius: 24px;
+  width: 35%;
+  margin: 0;
+  object-fit: cover;
+  border-top-left-radius: 5px; 
+  border-bottom-left-radius: 5px;
+        }
+.video-container video {
+            position: absolute;
+            height: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Centers the video perfectly */
+        }
+
 /*Cartão título*/
 .titleCard{
   width: 45%;
