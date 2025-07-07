@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
         icard.style.width = '40%';
       });
       titleCards.forEach(tcard => {
-        tcard.style.width = '55%';
+        tcard.style.width = '45%';
       });
     } else {
       // Revert to original desktop sizes by removing the inline styles

@@ -1,34 +1,43 @@
 /*Material v3 Expressive Shapes*/
 .squircle {
-  border-radius: 50% 50% 50% 50% / 80% 80% 20% 20%;
+  border-radius: 30% 30% 30% 30%;
+  transition: all 0.1s ease-in-out;
 }
 .squircle:hover {
   border-radius: 50% 50% 50% 50% / 20% 20% 80% 80%;
+  transition: all 0.1s ease-in-out;
 }
 
 .blob {
   border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  transition: all 0.1s ease-in-out;
 }
 .blob:hover {
   border-radius: 60% 40% 30% 70% / 50% 60% 50% 40%;
+  transition: all 0.1s ease-in-out;
 }
 
 .circle {
   border-radius: 50%;
+  transition: all 0.1s ease-in-out;
 }
 .circle:hover {
   border-radius: 40% 60% 50% 50% / 50% 40% 50% 60%;
+  transition: all 0.1s ease-in-out;
 }
 
 .arch {
-  border-radius: 50% 50% 0 0;
+  border-radius: 50% 50% 5px 5px;
+  transition: all 0.1s ease-in-out;
 }
 .arch:hover {
   border-radius: 60% 60% 10% 10%;
+  transition: all 0.1s ease-in-out;
 }
 
 .pill {
   border-radius: 999px;
+  transition: all 0.1s ease-in-out;
 }
 
 .pill:hover {
@@ -36,6 +45,7 @@ border-radius: 30px;
   transform: scale(1.2);
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
   animation: animateCircle 5s ease-in-out infinite;
+  transition: all 0.1s ease-in-out;
 }
 @keyframes animateCircle {
   0%, 100% {
@@ -53,39 +63,49 @@ border-radius: 30px;
   }
 }
 
-.arrow {
+.pou {
   border-radius: 45% 45% 20% 20% / 80% 80% 35% 35%;
+  transition: all 0.1s ease-in-out;
 }
-.arrow:hover {
+.pou:hover {
   border-radius: 20% 20% 45% 45% / 35% 35% 80% 80%;
+  transition: all 0.1s ease-in-out;
 }
 
 .gem {
   border-radius: 30% 70% 30% 70% / 50% 50% 50% 50%;
+  transition: all 0.1s ease-in-out;
 }
 .gem:hover {
   border-radius: 70% 30% 70% 30% / 50% 50% 50% 50%;
+  transition: all 0.1s ease-in-out;
 }
 
 .foursided {
   border-radius: 40% 60% 40% 60% / 60% 40% 60% 40%;
+  transition: all 0.1s ease-in-out;
 }
 .foursided:hover {
   border-radius: 60% 40% 60% 40% / 40% 60% 40% 60%;
+  transition: all 0.1s ease-in-out;
 }
 
 .ghost {
   border-radius: 50% 50% 35% 35% / 60% 60% 40% 40%;
+  transition: all 0.1s ease-in-out;
 }
 .ghost:hover {
   border-radius: 50% 50% 45% 25% / 60% 60% 55% 45%;
+  transition: all 0.1s ease-in-out;
 }
 
 .bun {
   border-radius: 50% 50% 10% 10% / 80% 80% 20% 20%;
+  transition: all 0.1s ease-in-out;
 }
 .bun:hover {
   border-radius: 60% 60% 15% 15% / 70% 70% 30% 30%;
+  transition: all 0.1s ease-in-out;
 }
 
 
@@ -214,4 +234,22 @@ border-radius: 30px;
   50% {
     border-radius: 50% 50% 25% 25% / 90% 90% 10% 10%;
   }
+}
+
+/* Elements */
+.wavy-line {
+  --s: 44px; /* size of the wave */
+  --b: 16px; /* thickness of the line */
+  --m: 0.4; /* curvature of the wave [0 2] */
+  
+  background-color: #F1DEDD;
+  --R: calc(var(--s)*sqrt(var(--m)*var(--m) + 1) + var(--b)/2);
+  height: calc(2*var(--R));
+  width: 100%;
+  --_g: #0000 calc(99% - var(--b)), #000 calc(101% - var(--b)) 99%, #0000 101%;
+  mask:
+    radial-gradient(var(--R) at left 50% bottom calc(-1*var(--m)*var(--s)), var(--_g)) 
+     calc(50% - 2*var(--s)) calc(50% - var(--s)/2 - var(--b)/2)/calc(4*var(--s)) calc(var(--s) + var(--b)) repeat-x,
+    radial-gradient(var(--R) at left 50% top calc(-1*var(--m)*var(--s)),var(--_g)) 
+     50% calc(50% + var(--s)/2 + var(--b)/2)/calc(4*var(--s)) calc(var(--s) + var(--b)) repeat-x;
 }
