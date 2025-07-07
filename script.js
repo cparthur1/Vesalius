@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const textElements = document.querySelectorAll('p, h1, h2'); // Select all text elements
   const buttons = document.querySelectorAll('.MainButton, .SecondaryButton, .call2action'); // Select all buttons
   const infoCards = document.querySelectorAll('.infoCard'); // Select all info cards
+  const titleCards = document.querySelectorAll('.titleCard'); // Select all title cards
 
   // --- Store Original Sizes ---
   // Store the initial font size for each text element.
@@ -24,9 +25,13 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Store the initial width for each info card.
-  infoCards.forEach(card => {
-      const originalWidth = window.getComputedStyle(card).width;
-      card.setAttribute('data-original-width', originalWidth);
+  infoCards.forEach(icard => {
+      const originalWidth = window.getComputedStyle(icard).width;
+      icard.setAttribute('data-original-width', originalWidth);
+  });
+  titleCards.forEach(tcard => {
+      const originalWidth = window.getComputedStyle(tcard).width;
+      tcard.setAttribute('data-original-width', originalWidth);
   });
   // --- End of Storing Original Sizes ---
 
@@ -67,8 +72,11 @@ document.addEventListener('DOMContentLoaded', () => {
         button.style.width = `${originalWidth + 20}px`;
         button.style.height = `${originalHeight + 20}px`;
       });
-      infoCards.forEach(card => {
-        card.style.width = '40%';
+      infoCards.forEach(icard => {
+        icard.style.width = '40%';
+      });
+      titleCards.forEach(tcard => {
+        tcard.style.width = '55%';
       });
     } else {
       // Revert to original desktop sizes by removing the inline styles
@@ -79,8 +87,11 @@ document.addEventListener('DOMContentLoaded', () => {
         button.style.width = ''; // Reverts to the CSS stylesheet value
         button.style.height = ''; // Reverts to the CSS stylesheet value
       });
-      infoCards.forEach(card => {
-        card.style.width = ''; // Reverts to the CSS stylesheet value
+      infoCards.forEach(icard => {
+        icard.style.width = ''; // Reverts to the CSS stylesheet value
+      });
+      titleCards.forEach(tcard => {
+        tcard.style.width = ''; // Reverts to the CSS stylesheet value
       });
     }
     // --- End of Adjusting Sizes ---
