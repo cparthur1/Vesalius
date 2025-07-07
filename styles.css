@@ -8,6 +8,11 @@
   font-family: 'Open Sans', sans-serif;;
 }
 
+.p{
+  width: 95%;
+  font-size: 18px;
+}
+
 .MainButton {
   width: 100px;
   height: 100px;
@@ -73,7 +78,6 @@
 .HorizontalNav {
   margin: 24px;
   margin-right: 6%;
-  width: auto;
   border-radius: 999px;
   display: flex;
   align-items: center;
@@ -152,9 +156,9 @@
   width: 45%;
   border-radius: 24px;
   padding: 24px;
+  padding-bottom: 104px;
   padding-left: 36px;
   background-color: #F2CDCb;
-  font-size: 16px;
   color: #2e1715;
   position: relative;
 }
@@ -165,11 +169,19 @@
   width: 70%;
 }
 
+.h2{
+  font-weight: 600;
+  font-size: 40px;
+  margin: 0;
+  width: 70%;
+}
+
 /*Cartão informação */
 .infoCard{
   background-color: #F1DEDD;
-  width: 300px;
+  width: 25%;
   border-radius: 24px;
   padding: 24px;
   position: relative;
+  padding-bottom: 6%;
 }
