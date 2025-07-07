@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=location_on');
 .page{
   background-color: #f8efed;
   color: #3B0908;
@@ -261,4 +262,68 @@
   border-top-left-radius: 5px;
   margin-top: 0;
   margin-bottom: 5px;
+}
+
+/* Main content */
+.main-content-wrapper {
+  display: flex;
+  justify-content: center; /* Centers the content horizontally */
+  align-items: flex-start; /* Aligns items to the top */
+  gap: 24px; /* Space between the image and the cards */
+  margin-top: 24px;
+}
+
+.image-container {
+  position: relative; /* CRITICAL: This is the anchor for the pins */
+  flex-shrink: 0; /* Prevents the image container from shrinking */
+}
+
+.cards-container {
+  position: relative; /* This is the new anchor for the cards */
+  width: 350px;       /* Must match the card width */
+  height: 180px;      /* Set a fixed height to contain the tallest card */
+}
+
+
+/* --- Modify these existing rules --- */
+
+/* The image itself no longer needs absolute positioning */
+.piece {
+  width: 720px; /* or your desired width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 24px;
+  display: block; /* Removes any extra space below the image */
+  /* REMOVE position: absolute and other positioning properties */
+}
+
+.pin {
+  position: absolute;
+  height: 30px;
+  cursor: help;
+  z-index: 4;
+  /* top and left are now set via inline styles in the HTML */
+  /* This transform ensures the tip of the pin is at the coordinate, not its top-left corner */
+  transform: translate(-50%, -100%); 
+}
+
+/* CRITICAL: Change piececard position from 'fixed' to 'relative' */
+.piececard {
+  position: absolute; /* This stacks all cards in the same spot */
+  top: 0;
+  left: 0;
+  width: 100%; /* Make card fill the container width */
+  height: auto;
+  background-color: #F1DEDD;
+  border-radius: 24px;
+  padding: 24px;
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: opacity 0.3s ease, visibility 0.3s ease; /* Adds a smooth fade */
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
 }

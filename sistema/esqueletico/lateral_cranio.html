@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head> 
+        <link rel="stylesheet" href="../../styles.css">
+        <link rel="stylesheet" href="../../shapes.css">
+        <meta charset="UTF-8">
+        <title>Corte sagital do crânio</title>
+        <link rel="icon" type="image/x-icon" href="../../ilustrations/Favicon.svg">
+        <style>
+            /* For screens that are taller than they are wide */
+            @media (orientation: portrait) {
+              .main-content-wrapper {
+                flex-direction: column;
+                align-items: center;
+              }
+            }
+        </style>
+        <script src="../cardmanager.js"></script>
+    </head>
+    </head>
+    <body class="page">
+        <div class="VerticalNav">
+        <div class="MainButton ghost alive selected" onclick="window.location.href='../sistema.html'">
+            <img src="../../icons/humanSelect.svg" alt="human" class="mainIcon">
+        </div>
+        <div class="SecondaryButton pill" onclick="window.location.href='../../index.html'">
+            <img src="../../icons/home.svg" alt="paper info" class="SecondaryIcon">
+            <p style="margin: 0;">Início</p>
+        </div>
+        <div class="SecondaryButton pill" onclick="window.location.href='../../projeto/projeto.html'">
+            <img src="../../icons/paper.svg" alt="paper info" class="SecondaryIcon">
+            <p style="margin: 0;">Projeto</p>
+        </div>
+        <div class="SecondaryButton pill" onclick="window.location.href='../../furb/furb.html'">
+            <img src="../../icons/institute.svg" alt="paper info" class="SecondaryIcon">
+            <p style="margin: 0;">FURB</p>
+        </div>
+        </div>
+        <div class="contentH">
+        <h1 class="h1 alone" id="project-title" style="display: block; width: fit-content; align-self: center;">
+    Corte sagital do crânio
+</h1>
+
+<div class="main-content-wrapper">
+
+    <div class="image-container">
+    <img src="./Sagital.png" class="piece"/>
+    
+    <img src="../../icons/pin.svg" class="pin" data-target="seio-frontal" style="top: 48%; left: 17%;">
+    
+    <img src="../../icons/pin.svg" class="pin" data-target="osso-parietal" style="top: 40%; left: 70%;">
+</div>
+
+<div class="cards-container">
+    <div class="piececard hidden" id="seio-frontal" style="z-index: 2;">
+        <h2 class="h2" style="width: auto;">Seio Frontal</h2>
+        <div class="call2action pill" onclick="window.location.href='https://www.kenhub.com/pt/library/anatomia/seios-paranasais#:~:text=respirar%20ar%20puro!-,Seio%20Frontal,-Anatomia'">
+            <p style="margin: 0;">KenHub ↗</p>
+        </div>
+    </div>
+    
+    <div class="piececard hidden" id="osso-parietal" style="z-index: 1;">
+        <h2 class="h2" style="width: auto;">Osso Parietal</h2>
+        <div class="call2action pill" onclick="window.location.href='https://www.kenhub.com/pt/library/anatomia/osso-parietal'">
+            <p style="margin: 0;">KenHub ↗</p>
+        </div>
+    </div>
+</div>
+
+        <div class="row" style="position: absolute; top: 1200px; left: 24px;">
+            <p>Copyright © CHRISTOFF, A.; CORRÊA, H.; FEYH, J. ZANCHETT, L., 2025</p>
+        </div>
+    </body>
+</html>
