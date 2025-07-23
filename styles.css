@@ -98,10 +98,9 @@
 
 .contentH{
   justify-content: center;
-  width: 90%;
+  width: calc(90%-148px);
+  margin-left: 148px;
   height: 100%;
-  position: relative;
-  left: 154px;
 }
 .contentV{
   justify-content: center;
